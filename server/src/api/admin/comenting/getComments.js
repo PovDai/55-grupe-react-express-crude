@@ -1,0 +1,5 @@
+export function getComments() {
+    
+    return;
+
+}

@@ -7,7 +7,7 @@ export async function editUserById(req, res) {
     try {
         const sql = `
             UPDATE student_details 
-            SET name = ?, email = ?, age = ?, gender = ?,comments=?,
+            SET name = ?, email = ?, age = ?, gender = ?,comments=?
             WHERE id = ?
         `;
         const values = [name, email, age, gender, comments, id];

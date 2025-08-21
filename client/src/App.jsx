@@ -6,7 +6,7 @@ import { HomePage } from './pages/public/Home'
 import { LoginPage } from './pages/public/Login'
 import { RegisterPage } from './pages/public/Register'
 import { Page404 } from './pages/public/Page404'
-import {Dashboard  } from './pages/admin/Dashboard'
+import {Dashboard} from'./pages/admin/Dashboard'
 import { AdminTemplate } from './templates/AdminTemplate'
 import { CategoriesPage } from './pages/public/Categories'
 import { UserContextWrapper } from './context/user/UserContextWrapper'
@@ -49,6 +49,7 @@ export function App() {
             </Route>
 
             <Route element={<AdminTemplate />}>
+              <Route path='/admin' index element={<Dashboard/>}/>
               <Route path='/admin/categories' element={<AdminCategoriesAllPage />} />
               <Route path='/admin/categories/new' element={<AdminNewCategoryPage />} />
               <Route path='/admin/categories/:category' element={<AdminViewCategoryPage />} />

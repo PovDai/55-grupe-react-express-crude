@@ -28,6 +28,7 @@ import { HomeComments } from './components/komentarai/HomeComment'
 import { CreateComments } from './components/komentarai/CreateComment'
 import { EditComments } from './components/komentarai/EditComment';
 import {ReadComments} from'./components/komentarai/ReadComment'
+import { UploadTable } from './components/komentarai/UploadTable'
 
 export function App() {
   
@@ -67,7 +68,8 @@ export function App() {
               <Route path='/komentarai' element={<HomeComments/>} />
               <Route path='/kurti' element={<CreateComments />} />
               <Route path='/koreguoti/:id' element={<EditComments />} />
-              <Route path='/skaityti/:id' element={<ReadComments/>}/>
+              <Route path='/skaityti/:id' element={<ReadComments />} />
+              <Route path='/upload' element={<UploadTable/>}/>
             </Route>
 
           

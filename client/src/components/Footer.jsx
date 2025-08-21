@@ -10,6 +10,7 @@ export function Footer() {
                     <li className="nav-item"><Link to="/categories" className="nav-link px-2 text-body-secondary">Categories</Link></li>
                     <li className="nav-item"><Link to="/students" className="nav-link px-2 text-body-secondary">Students</Link></li>
                     <li className="nav-item"><Link to="/komentarai" className="nav-link px-2 text-body-secondary">Komentarai</Link></li>
+                    <li className="nav-item"><Link to="/upload" className="nav-link px-2 text-body-secondary">Ikelti nuotrauka</Link></li>
                     
             
         </ul>

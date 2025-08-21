@@ -24,6 +24,7 @@ import { getCommentById } from './src/api/public/komentarai/getCommentById.js';
 import { editCommentById } from './src/api/public/komentarai/editCommentById.js';
 import { deleteCommentById } from './src/api/public/komentarai/deleteComment.js';
 import { getComments } from './src/api/public/komentarai/getComment.js';
+import { upload } from "./src/api/public/komentarai/upload.js";
 
 
 
@@ -71,6 +72,18 @@ app.get('/komentarai', getComments);
 app.get('/get_comments/:id', getCommentById);
 app.post('/edit_comment/:id', editCommentById);
 app.delete('/delete_comment/:id', deleteCommentById);
+
+
+
+app.post('/upload', async (req, res) => {
+  try {
+    // ...tavo failo saugojimas
+    res.json({ status: "success", message: "File uploaded!" });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ status: "error", message: "Server error" });
+  }
+});
 
 
 

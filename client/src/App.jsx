@@ -19,12 +19,15 @@ import { AdminNewCategoryPage } from './pages/admin/categories/NewCategory'
 import { AdminEditCategoryPage } from './pages/admin/categories/EditCategory'
 import { AdminViewCategoryPage } from './pages/admin/categories/ViewCategory'
 import { CategoriesContextWrapper } from './context/categories/CategoriesContextWrapper'
-import { Coments } from './components/Coments'
 import { StudentTemplate } from './templates/StudentTemplate';
 import { Home } from './components/students/Home'
 import { Create } from './components/students/Create'
 import { Edit } from './components/students/Edit';
 import { Read } from './components/students/Read'
+import { HomeComments } from './components/komentarai/HomeComment'
+import { CreateComments } from './components/komentarai/CreateComment'
+import { EditComments } from './components/komentarai/EditComment';
+import {ReadComments} from'./components/komentarai/ReadComment'
 
 export function App() {
   
@@ -46,15 +49,6 @@ export function App() {
             </Route>
 
             <Route element={<AdminTemplate />}>
-              <Route path='/admin' element={<Dashboard />} />
-              <Route path='/admin/comments' element={<Coments />} />
-              <Route path='/admin/comments/new' element={<Coments />} />
-              <Route path='/admin/comments/:comments' element={<Coments />} />
-              <Route path='/admin/comments/:comments/edit' element={<Coments />} />
-              
-
-
-
               <Route path='/admin/categories' element={<AdminCategoriesAllPage />} />
               <Route path='/admin/categories/new' element={<AdminNewCategoryPage />} />
               <Route path='/admin/categories/:category' element={<AdminViewCategoryPage />} />
@@ -68,6 +62,11 @@ export function App() {
         <Route path="/create" element={<Create />} />
         <Route path="/edit/:id" element={<Edit />} />
         <Route path="/read/:id" element={<Read />} />
+              
+              <Route path='/komentarai' element={<HomeComments/>} />
+              <Route path='/kurti' element={<CreateComments />} />
+              <Route path='/koreguoti/:id' element={<EditComments />} />
+              <Route path='/skaityti/:id' element={<ReadComments/>}/>
             </Route>
 
           

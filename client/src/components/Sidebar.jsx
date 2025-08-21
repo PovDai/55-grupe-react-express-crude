@@ -37,11 +37,7 @@ export function Sidebar() {
                                 Draft categories
                             </Link>
                         </li>
-                          <li className="nav-item">
-                            <Link className="nav-link d-flex align-items-center gap-2 " to="/admin/comments">
-                                Comments
-                            </Link>
-                        </li>
+                    
                     </ul>
                     
                 </div>

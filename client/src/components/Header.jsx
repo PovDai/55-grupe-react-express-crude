@@ -14,6 +14,7 @@ export function Header() {
         
                         <li><NavLink to="/categories" className="nav-link px-2">Categories </NavLink></li>
                         <li><NavLink to="/students" className="nav-link px-2">Students </NavLink></li>
+                        <li><NavLink to="/komentarai" className="nav-link px-2">Komentarai </NavLink></li>
                         
            
         </ul>
